@@ -1,6 +1,6 @@
 Die Tests brauchen einen extra Constructor für Board:
 
-```
+```java
 public Board(int board[][]) {
     this.n = board.length;
     this.board = board;
