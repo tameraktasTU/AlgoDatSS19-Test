@@ -74,7 +74,7 @@ class TicTacToeTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         TicTacToe.evaluatePossibleMoves(test, player);
-        assertEquals(expected, outContent.toString());
+        assertEquals(expected, outContent.toString().replace("\r\n", "\n"));
         System.setOut(originalOut);
     }
 }
