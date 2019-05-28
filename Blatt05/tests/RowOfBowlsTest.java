@@ -22,7 +22,7 @@ class RowOfBowlsTest {
     void maxGain5000Elements() {
         int k = 5000;
         int[] bowls = new int[k];
-        for (int i = 0; i < k; i++) bowls[i] = (int)Math.random();
+        for (int i = 0; i < k; i++) bowls[i] = ThreadLocalRandom.current().nextInt(1, 50);
 
         RowOfBowls row = new RowOfBowls();
 
