@@ -25,8 +25,8 @@ class DepthFirstPathsTest {
 
 		int[] expectedPre = {0, 3, 4, 5, 7, 6, 8, 2, 1};
 		int[] expectedPost = {6, 7, 8, 1, 2, 5, 4, 3, 0};
-		int[] expextedEdge = {0, 2, 5, 0, 3, 4, 7, 4, 5};
-		int[] expextedDist = {0, 5, 4, 1, 2, 3, 5, 3, 4};
+		int[] expextedEdge = {0, 2, 5, 0, 3, 4, 7, 5, 5};
+		int[] expextedDist = {0, 5, 4, 1, 2, 3, 5, 4, 4};
 
 		Queue<Integer> pre = p.pre();
 		Queue<Integer> post = p.post();
@@ -102,7 +102,7 @@ class DepthFirstPathsTest {
 		List<Integer> path = p.pathTo(7);
 		assertNotNull(path);
 
-		int[] expectedPath = {0, 3, 4, 7};
+		int[] expectedPath = {7, 5, 4, 3, 0};
 		assertEquals(path.size(), expectedPath.length);
 
 		for (int i = 0; i < path.size(); i++) {
